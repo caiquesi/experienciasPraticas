@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ONG Como Cães e Gatos - resgate e adoção responsável de cães e gatos em São Paulo. Adote, apoie, compartilhe.">
+    <meta property="og:title" content="Como Cães e Gatos - Adoção e Voluntariado">
+    <meta property="og:description" content="Transforme vidas! Participe da ONG Como Cães e Gatos.">
+    <meta property="og:image" content="assets/icons/main.jpg">
+    <meta property="og:type" content="website">    
+    <link rel="icon" href="assets/icons/main.png">
+    <title>Organização voluntáriado</title>
+</head>
+<body>
+    <header>
+        <h1><a href="index.html">Como Cães e Gatos</a></h1>
+        <img id="logo" src="img/cao-e-gato-filhotes.png" alt="Filhotes de cão e gato, logotipo da ONG Como Cães e Gatos">
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu de navegação">☰</button>
+            <ul id="navMenu">
+                <li><strong>Início</strong></li>
+                <li><a href="projeto.html">Projetos</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- Quem Somos, Sobre a ONG -->
+    <main>
+        <div class="conteudo">
+            <section class="quem-somos">
+                <h2>Quem somos</h2>
+                <p>Somos uma Organização sem fins lucrativos com foco no realocamento de cães e gatos abandonados.</p>
+                <p>A Como Cães e Gatos é uma ONG com sede em São Paulo, formada por pessoas que compartilham uma paixão em comum: transformar a vida de cães e gatos que foram abandonados, maltratados ou que simplesmente ainda não tiveram a sorte de encontrar um lar.
+                    Nosso foco é o resgate e realocamento responsável desses animais, oferecendo a eles uma nova chance por meio da adoção consciente. Acreditamos que cada vida importa e que todo animal merece carinho, proteção e respeito.
+                    Trabalhamos diariamente para garantir que nossos resgatados recebam cuidados veterinários, alimentação adequada, atenção e, principalmente, afeto. Sabemos que o caminho até um novo lar pode ser longo, mas cada passo é feito com amor e compromisso.
+                    Promovemos eventos de adoção em São Paulo, onde nossos cães e gatos têm a oportunidade de conhecer pessoas dispostas a abrir não apenas as portas de casa, mas também do coração. Para nós, cada adoção é um recomeço — tanto para o animal quanto para quem o acolhe.
+                    A Como Cães e Gatos é feita de voluntários, colaboradores e apoiadores que acreditam que juntos podemos fazer a diferença. Porque no fim das contas, todos merecem amor — sejam eles como cães, como gatos, ou como nós.
+                    Seja parte dessa mudança. Adote, apoie, compartilhe.</p>
+
+                <h3>Se identificou com a nossa proposta?</h3>
+                <p>Quer saber como fazer uma adoção? Clique <a href="projeto.html">aqui</a> e veja nossos projetos e fique por dentro dos próximos eventos.</p>
+                <p>Quer ser um dos nossos amigos voluntários? Clique <a href="cadastro.html">aqui</a> e saiba como.</p>
+            </section>
+
+            <aside class="galeria-lateral">
+                <h3>Nossos Resgates 🐾</h3>
+
+                <div class="galeria" id="galeria">
+                    <img src="img/cao1.jpg" alt="Cão resgatado 1">
+                    <img src="img/gato1.jpg" alt="Gato resgatado 2">
+                    <img src="img/cao2.jpg" alt="Cão resgatado 3">
+                    <img src="img/gato2.jpg" alt="Gato resgatado 4">
+
+                    <button class="seta esquerda" aria-label="Imagem anterior">❮</button>
+                    <button class="seta direita" aria-label="Próxima imagem">❯</button>
+                </div>
+            </aside>
+        </div>
+        
+        <div class="contato-mapa-container">
+            <section class="contato">
+                <h3>Fale Conosco</h3>
+                <form id="formContato">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" rows="5" cols="50" 
+                        maxlength="250" placeholder="Escreva aqui sua mensagem..."></textarea>
+                    <p id="contador">0 / 500</p>
+                    
+                    <button type="submit" aria-label="Enviar Mensagem" id="btnEnviar">Enviar</button>
+                </form>
+            </section>
+
+            <section class="frame-imagens">
+                <h3>Onde Estamos</h3>
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.708405930554!2d-46.63797832470524!3d-23.578002162844857!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c9e0b47e2b%3A0x40cde54b732fdf5c!2sRua%20Volunt%C3%A1rios%20da%20P%C3%A1tria%2C%20171%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1730000000000"
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <address>
+                <p>Endereço: Rua Voluntarios dos Animais, 123 - Bairro: Pets - Cidade: São Paulo</p>
+                <p>Telefone: (11) 99999-9999</p>
+                <p>Email: atendimento@caesegatos.org.br</p>
+            </address>
+
+        <p>&copy; 2025 Como Cães e Gatos</p>
+    </footer>
+
+    <div id="popupMensagem" class="popup">
+        <div class="popup-conteudo" id="popupConteudo"></div>
+    </div>
+
+</body>
+</html>

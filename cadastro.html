@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de cadastro de voluntários do projeto Como Cães e Gatos. Participe e ajude animais em situação de vulnerabilidade.">
+    <link rel="icon" href="assets/icons/main.png">
+     <title>Cadastro de Voluntários | Como Cães e Gatos</title>
+</head>
+<body>
+    <!-- Cabeçalho -->
+   <header>
+        <h1><a href="index.html">Como Cães e Gatos</a></h1>
+        <img id="logo" src="img/cao-e-gato-filhotes.png" alt="cao e gato filhotes">
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu de navegação">☰</button>
+            <ul id="navMenu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projeto.html">Projetos</a></li>
+                <li><strong>Cadastro</strong></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Atividades do Voluntário -->
+        <section class="atividades">
+            <h2>Gostou da nossa iniciativa e quer fazer parte ?</h2>
+            <p>Abaixo estão algumas atividades nas quais você poderá se voluntariar:</p>
+            <ul>
+                    <li><strong>Cuidado Direto e Socialização dos Animais:</strong>
+                            Alimentar, limpar os recintos, dar banho e tosa (se tiver habilidade/apoio), e, crucialmente, 
+                            interagir e passear com os cães e brincar/socializar com os gatos.</li>
+                    
+                    <li><strong>Apoio em Eventos de Adoção e Feiras:</strong>
+                            Preencher cadastros, recepcionar e orientar o público interessado.</li>
+
+                    <li><strong>Transporte de Animais:</strong> Transporte de animais para consultas veterinárias, 
+                            para as feiras de adoção e entrega aos adotantes.</li>
+
+                    <li><strong>Atividades Administrativas:</strong>
+                            Ajudar na gestão de mídias sociais (divulgar os animais para adoção, postar histórias de sucesso)</li>
+            </ul>
+        </section>
+
+        <p>Preencha o formulário abaixo e seja um voluntário.</p>
+        <!-- Formulário para o Voluntário preencher -->
+        <section class="signup-section">
+            <div class="form-container">
+                <h3>Formulário de Cadastro de Voluntários</h3>
+                <form id="formCadastro">
+                    <fieldset>
+                        <legend>Dados Pessoais</legend>
+                        <div class="form-group">
+                            <label for="nome">Nome Completo *</label>  
+                            <input type="text" name="nome" id="nome" 
+                                    title="seu nome completo" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" name="email" id="email"
+                                    title="seu email" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="cpf">CPF *</label>
+                            <input type="text" name="cpf" id="cpf"
+                                    pattern="[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}" 
+                                    placeholder="000.000.000-00" title="Formato: 000.000.000-00" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telefone">Telefone *</label>
+                            <input type="tel" name="telefone" id="telefone"
+                                    pattern="\([0-9]{2}\) [0-9]{5}-[0-9]{4}" 
+                                    placeholder="(00) 00000-0000" title="Formato: (00) 00000-0000" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nascimento">Data de Nascimento *</label>
+                            <input type="date" name="nascimento" id="nascimento" 
+                                    title="data de nascimento" required>
+                            <small class="erro-mensagem"></small> 
+                        </div>
+
+                        <div class="form-group">
+                            <label for="endereco">Endereço *</label>
+                            <input type="text" name="endereco" id="endereco"
+                                    title="endereço residencial" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cep">CEP *</label>
+                            <input type="text" name="cep" id="cep"
+                                    pattern="[0-9]{5}-[0-9]{3}"
+                                    placeholder="00000-000" title="Formato: 00000-000" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="cidade">Cidade *</label>
+                            <input type="text" name="cidade" id="cidade"
+                                    title="cidade que reside" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="estado">Estado *</label>
+                            <input type="text" name="estado" id="estado"
+                                    title="estado que reside" required>
+                            <small class="erro-mensagem"></small>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="mensagem">Nos conte um pouco sobre você (Opcional):</label>
+                            <textarea name="sobre_voluntario" id="mensagem" rows="5" cols="40" 
+                                maxlength="500" placeholder="Escreva aqui sua mensagem..."></textarea>
+                            <p id="contador">0 / 500</p>
+                        </div>
+
+                        <button type="submit" aria-label="Enviar formulário de cadastro" id="btnEnviar">Enviar</button>
+                    </fieldset>
+                </form>
+            </div>
+            
+            <div class="image-container">
+                <img src="img/lado-direito.jpg" alt="Mulher brincando com um cachorro e um gato">
+            </div>
+        </section>
+        <section id="acessoCadastros">
+            <h2>🔒 Área Restrita</h2>
+            <p>Digite a senha para visualizar a lista de pessoas cadastradas:</p>
+            <input type="password" id="senhaAcesso" placeholder="Digite a senha">
+            <button id="btnEntrarLista">Entrar</button>
+            <p id="erroSenha" style="color:red; display:none;">Senha incorreta! Tente novamente.</p>
+        </section>
+
+        <!-- LISTA DE CADASTROS (INICIALMENTE OCULTA) -->
+        <section id="listaCadastros" style="display: none;">
+            <h2>📋 Pessoas Cadastradas</h2>
+            <button id="atualizarTabela">Atualizar Lista</button>
+            <table id="tabelaCadastros">
+                <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Nascimento</th>
+                    <th>Cidade</th>
+                    <th>Estado</th>
+                    <th>Data de Cadastro</th>
+                    <th>Ações</th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </section>
+        <p id="mensagemFeedBack"></p>
+    </main>
+
+    <footer>
+        <address>
+            <p>Endereço: Rua Voluntarios dos Animais, 123 - Bairro: Pets - Cidade: São Paulo</p>
+            <p>Telefone: (11) 99999-9999</p>
+            <p>Email: atendimento@caesegatos.org.br</p>
+        </address>
+        <p>&copy; 2025 Como Cães e Gatos</p>
+    </footer>
+
+    <div id="popupMensagem" class="popup">
+        <div class="popup-conteudo" id="popupConteudo"></div>
+    </div>
+</body>
+</html>
